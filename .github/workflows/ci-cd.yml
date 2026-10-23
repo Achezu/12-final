@@ -58,4 +58,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/parcel-app:${{ github.ref_name }}
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/parcel-app:${{ github.ref_name }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/parcel-app:latest
